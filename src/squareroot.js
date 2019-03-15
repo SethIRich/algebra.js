@@ -39,3 +39,16 @@ SquareRoot.prototype.multiply = function(r) {
 		/* TODO: Do something here */
 	};
 };
+
+SquareRoot.prototype.toTex = function() {
+	latex = '';
+	if (this.outer == 1) {
+	} else if (this.outer == -1) {
+		latex += '-';
+	} else {
+		latex += this.outer;
+	};
+	latex += '\\sqrt{' + this.inner + '}';
+	return latex;
+}
+
