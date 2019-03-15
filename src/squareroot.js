@@ -52,3 +52,15 @@ SquareRoot.prototype.toTex = function() {
 	return latex;
 }
 
+SquareRoot.prototype.toString = function() {
+	out = '';
+	if (this.outer == 1) {
+	} else if (this.outer == -1) {
+		out += '-';
+	} else {
+		out += this.outer;
+	};
+	out += '*Sqrt(' + this.inner + ')';
+	return out;
+}
+
