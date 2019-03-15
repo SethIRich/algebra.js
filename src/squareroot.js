@@ -11,6 +11,10 @@ SquareRoot.prototype.copy = function() {
 	return n;
 };
 
+SquareRoot.prototype.valueOf = function() {
+	return this.outer * Math.sqrt(this.inner);
+};
+
 SquareRoot.prototype.reduce = function() {
 	var copy = this.copy();
 	for (i = Math.floor(Math.sqrt(copy.inner)); i>1; i--) {
